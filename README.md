@@ -31,8 +31,13 @@ The benchmarks are based on timings of `prepareLayout`
 
 ###iOS simulator
 
+<<<<<<< HEAD
 NumSections|NumItemsPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
 -|-|-|-
+=======
+NumSections|NumItemPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
+---|---|---|---
+>>>>>>> FETCH_HEAD
 1|100|0.0160560011863708|0.000555038452148438
 1|1000|0.228259027004242|0.0039139986038208
 1|3000|1.20643001794815|0.0141730308532715
@@ -43,8 +48,13 @@ NumSections|NumItemsPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
 
 ###iPhone 6
 
+<<<<<<< HEAD
 NumSections|NumItemsPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
 -|-|-|-
+=======
+NumSections|NumItemPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
+---|---|---|---
+>>>>>>> FETCH_HEAD
 1   | 100   | 0.0517209768295288 | 0.00196903944015503
 1   | 1000  | 0.565874993801117 | 0.0149750113487244
 1   | 3000 | Recursion overflow, not yet tail optimized | 0.0408549904823303
