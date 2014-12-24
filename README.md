@@ -1,20 +1,28 @@
 ZLBalancedFlowLayout
 ========================
 
-A UICollectionViewFlowLayout subclass that scales items to take up space, optimized for large item set, inspired by NHBalancedFlowLayout.
+A [UICollectionViewFlowLayout](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionViewFlowLayout_class/) subclass that scales items to take up space, optimized for large item set, inspired by [NHBalancedFlowLayout](https://github.com/njdehoog/NHBalancedFlowLayout).
 
 Previews
 ---
+###UICollectionViewScrollDirectionVertical
 <img width="320 px" src="Previews/vertical.png"/>
 <img width="320 px" src="Previews/verticalSmall.png"/>
+<img width="640 px" src="Previews/verticalLandscape.png"/>
+###UICollectionViewScrollDirectionHorizontal
+<img width="640 px" src="Previews/horizontalLandscape.png"/>
 
 Usage
 ---
-Checkout the demo app for an example.
+Checkout the [demo app](https://github.com/zhxnlai/ZLBalancedFlowLayout/tree/master/ZLBalancedFlowLayoutDemo) for an example.
 
 ZLBalancedFlowLayout supports all properties of UICollectionViewFlowLayout and the corresponding delegate methods, including `minimumLineSpacing`, `minimumInteritemSpacing`, `sectionInset`, etc.
 
 Use `rowHeight` to adjust the item height.
+~~~swift
+/// The ideal row height of items in the grid
+var rowHeight = CGFloat(120)
+~~~
 
 Benchmarks
 ---
@@ -23,7 +31,7 @@ The benchmarks are based on timings of `prepareLayout`
 
 ###iOS simulator
 
-NumSections|NumItemPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
+NumSections|NumItemsPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
 -|-|-|-
 1|100|0.0160560011863708|0.000555038452148438
 1|1000|0.228259027004242|0.0039139986038208
@@ -35,7 +43,7 @@ NumSections|NumItemPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
 
 ###iPhone 6
 
-NumSections|NumItemPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
+NumSections|NumItemsPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
 -|-|-|-
 1   | 100   | 0.0517209768295288 | 0.00196903944015503
 1   | 1000  | 0.565874993801117 | 0.0149750113487244
@@ -43,10 +51,6 @@ NumSections|NumItemPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
 10  | 100   | 0.523442983627319 | 0.0157199501991272
 10  | 1000  | 5.28750801086426 | 0.130671977996826
 100 | 100   | 4.89241003990173 | 0.118210017681122
-
-Todos
----
-- [ ] Support horizontal direction
 
 Requirements
 ---
