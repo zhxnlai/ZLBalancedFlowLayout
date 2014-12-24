@@ -7,6 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092B26631A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26471A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg */; };
+		092B26641A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26481A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg */; };
+		092B26651A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26491A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg */; };
+		092B26661A4AD1C500302120 /* bear-swimming-kamchatka-russia_82982_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B264A1A4AD1C500302120 /* bear-swimming-kamchatka-russia_82982_990x742.jpg */; };
+		092B26671A4AD1C500302120 /* brown-pelican-atlantic-musi_85704_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B264B1A4AD1C500302120 /* brown-pelican-atlantic-musi_85704_990x742.jpg */; };
+		092B26681A4AD1C500302120 /* camels-pushkar-fair-india_86225_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B264C1A4AD1C500302120 /* camels-pushkar-fair-india_86225_990x742.jpg */; };
+		092B26691A4AD1C500302120 /* cheetah-rest-south-africa_86226_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B264D1A4AD1C500302120 /* cheetah-rest-south-africa_86226_990x742.jpg */; };
+		092B266A1A4AD1C500302120 /* coppery-headed-emerald-hummingbird_83584_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B264E1A4AD1C500302120 /* coppery-headed-emerald-hummingbird_83584_990x742.jpg */; };
+		092B266B1A4AD1C500302120 /* deer-winter-snow-frost_82985_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B264F1A4AD1C500302120 /* deer-winter-snow-frost_82985_990x742.jpg */; };
+		092B266C1A4AD1C500302120 /* egret-fog-reflection_76312_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26501A4AD1C500302120 /* egret-fog-reflection_76312_990x742.jpg */; };
+		092B266D1A4AD1C500302120 /* fur-seal-dive-peschak_85948_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26511A4AD1C500302120 /* fur-seal-dive-peschak_85948_990x742.jpg */; };
+		092B266E1A4AD1C500302120 /* gray-langur-anand-india_86232_990x742 (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26521A4AD1C500302120 /* gray-langur-anand-india_86232_990x742 (1).jpg */; };
+		092B266F1A4AD1C500302120 /* green-iguana-bonaire-caribbean_82430_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26531A4AD1C500302120 /* green-iguana-bonaire-caribbean_82430_990x742.jpg */; };
+		092B26701A4AD1C500302120 /* green-turtle-tenerife_84734_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26541A4AD1C500302120 /* green-turtle-tenerife_84734_990x742.jpg */; };
+		092B26711A4AD1C500302120 /* grizzly-bear-yukon-nicklen_75339_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26551A4AD1C500302120 /* grizzly-bear-yukon-nicklen_75339_990x742.jpg */; };
+		092B26721A4AD1C500302120 /* gulls-mercury-island-namibia_85946_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26561A4AD1C500302120 /* gulls-mercury-island-namibia_85946_990x742.jpg */; };
+		092B26731A4AD1C500302120 /* iceland-highlands-horses-stampede_86229_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26571A4AD1C500302120 /* iceland-highlands-horses-stampede_86229_990x742.jpg */; };
+		092B26741A4AD1C500302120 /* impala-wildlife-delta-botswana_80189_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26581A4AD1C500302120 /* impala-wildlife-delta-botswana_80189_990x742.jpg */; };
+		092B26751A4AD1C500302120 /* lion-kalahari-south-africa_82432_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26591A4AD1C500302120 /* lion-kalahari-south-africa_82432_990x742.jpg */; };
+		092B26761A4AD1C500302120 /* lioness-mother-maasai-mara_83590_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B265A1A4AD1C500302120 /* lioness-mother-maasai-mara_83590_990x742.jpg */; };
+		092B26771A4AD1C500302120 /* mobula-rays-mexico-underwater_81117_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B265B1A4AD1C500302120 /* mobula-rays-mexico-underwater_81117_990x742.jpg */; };
+		092B26781A4AD1C500302120 /* monkey-water-phuket-thailand_80218_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B265C1A4AD1C500302120 /* monkey-water-phuket-thailand_80218_990x742.jpg */; };
+		092B26791A4AD1C500302120 /* napoleon-wrasse-coral_84739_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B265D1A4AD1C500302120 /* napoleon-wrasse-coral_84739_990x742.jpg */; };
+		092B267A1A4AD1C500302120 /* owl-stretching-reserve-kuwait_79192_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B265E1A4AD1C500302120 /* owl-stretching-reserve-kuwait_79192_990x742.jpg */; };
+		092B267B1A4AD1C500302120 /* polar-bear-rudolf-russia_82056_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B265F1A4AD1C500302120 /* polar-bear-rudolf-russia_82056_990x742.jpg */; };
+		092B267C1A4AD1C500302120 /* puffins-duel-skomer-green_79775_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26601A4AD1C500302120 /* puffins-duel-skomer-green_79775_990x742.jpg */; };
+		092B267D1A4AD1C500302120 /* social-worker-ants-macro_86239_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26611A4AD1C500302120 /* social-worker-ants-macro_86239_990x742.jpg */; };
+		092B267E1A4AD1C500302120 /* timberwolves-indiana-howl_76324_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26621A4AD1C500302120 /* timberwolves-indiana-howl_76324_990x742.jpg */; };
+		092B26801A4AE26000302120 /* komodo-indonesia-untherthiner_75353_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B267F1A4AE26000302120 /* komodo-indonesia-untherthiner_75353_990x742.jpg */; };
 		0945268B1A4A85FF00849DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945268A1A4A85FF00849DFC /* AppDelegate.swift */; };
 		0945268D1A4A85FF00849DFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945268C1A4A85FF00849DFC /* ViewController.swift */; };
 		094526901A4A85FF00849DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0945268E1A4A85FF00849DFC /* Main.storyboard */; };
@@ -14,30 +43,6 @@
 		094526951A4A85FF00849DFC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094526931A4A85FF00849DFC /* LaunchScreen.xib */; };
 		094526A11A4A85FF00849DFC /* ZLBalancedFlowLayoutDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094526A01A4A85FF00849DFC /* ZLBalancedFlowLayoutDemoTests.swift */; };
 		094526AC1A4A861800849DFC /* ZLBalancedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094526AB1A4A861800849DFC /* ZLBalancedFlowLayout.swift */; };
-		094526C71A4A86BC00849DFC /* photo-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526AF1A4A86BC00849DFC /* photo-01.jpg */; };
-		094526C81A4A86BC00849DFC /* photo-02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526B01A4A86BC00849DFC /* photo-02.jpg */; };
-		094526C91A4A86BC00849DFC /* photo-03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526B11A4A86BC00849DFC /* photo-03.jpg */; };
-		094526CA1A4A86BC00849DFC /* photo-04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526B21A4A86BC00849DFC /* photo-04.jpg */; };
-		094526CB1A4A86BC00849DFC /* photo-05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526B31A4A86BC00849DFC /* photo-05.jpg */; };
-		094526CC1A4A86BC00849DFC /* photo-06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526B41A4A86BC00849DFC /* photo-06.jpg */; };
-		094526CD1A4A86BC00849DFC /* photo-07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526B51A4A86BC00849DFC /* photo-07.jpg */; };
-		094526CE1A4A86BC00849DFC /* photo-08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526B61A4A86BC00849DFC /* photo-08.jpg */; };
-		094526CF1A4A86BC00849DFC /* photo-09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526B71A4A86BC00849DFC /* photo-09.jpg */; };
-		094526D01A4A86BC00849DFC /* photo-10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526B81A4A86BC00849DFC /* photo-10.jpg */; };
-		094526D11A4A86BC00849DFC /* photo-11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526B91A4A86BC00849DFC /* photo-11.jpg */; };
-		094526D21A4A86BC00849DFC /* photo-12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526BA1A4A86BC00849DFC /* photo-12.jpg */; };
-		094526D31A4A86BC00849DFC /* photo-13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526BB1A4A86BC00849DFC /* photo-13.jpg */; };
-		094526D41A4A86BC00849DFC /* photo-14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526BC1A4A86BC00849DFC /* photo-14.jpg */; };
-		094526D51A4A86BC00849DFC /* photo-15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526BD1A4A86BC00849DFC /* photo-15.jpg */; };
-		094526D61A4A86BC00849DFC /* photo-16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526BE1A4A86BC00849DFC /* photo-16.jpg */; };
-		094526D71A4A86BC00849DFC /* photo-17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526BF1A4A86BC00849DFC /* photo-17.jpg */; };
-		094526D81A4A86BC00849DFC /* photo-18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526C01A4A86BC00849DFC /* photo-18.jpg */; };
-		094526D91A4A86BC00849DFC /* photo-19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526C11A4A86BC00849DFC /* photo-19.jpg */; };
-		094526DA1A4A86BC00849DFC /* photo-20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526C21A4A86BC00849DFC /* photo-20.jpg */; };
-		094526DB1A4A86BC00849DFC /* photo-21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526C31A4A86BC00849DFC /* photo-21.jpg */; };
-		094526DC1A4A86BC00849DFC /* photo-22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526C41A4A86BC00849DFC /* photo-22.jpg */; };
-		094526DD1A4A86BC00849DFC /* photo-23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526C51A4A86BC00849DFC /* photo-23.jpg */; };
-		094526DE1A4A86BC00849DFC /* photo-24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 094526C61A4A86BC00849DFC /* photo-24.jpg */; };
 		094526E01A4AAF4500849DFC /* LabelCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094526DF1A4AAF4500849DFC /* LabelCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +57,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092B26471A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "american-crocodile-caribbean-sea_82044_990x742.jpg"; sourceTree = "<group>"; };
+		092B26481A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "atlantic-walrus-greenland-nicklen_75331_990x742.jpg"; sourceTree = "<group>"; };
+		092B26491A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bald-eagles-birds-talons_86760_990x742.jpg"; sourceTree = "<group>"; };
+		092B264A1A4AD1C500302120 /* bear-swimming-kamchatka-russia_82982_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bear-swimming-kamchatka-russia_82982_990x742.jpg"; sourceTree = "<group>"; };
+		092B264B1A4AD1C500302120 /* brown-pelican-atlantic-musi_85704_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "brown-pelican-atlantic-musi_85704_990x742.jpg"; sourceTree = "<group>"; };
+		092B264C1A4AD1C500302120 /* camels-pushkar-fair-india_86225_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "camels-pushkar-fair-india_86225_990x742.jpg"; sourceTree = "<group>"; };
+		092B264D1A4AD1C500302120 /* cheetah-rest-south-africa_86226_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cheetah-rest-south-africa_86226_990x742.jpg"; sourceTree = "<group>"; };
+		092B264E1A4AD1C500302120 /* coppery-headed-emerald-hummingbird_83584_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coppery-headed-emerald-hummingbird_83584_990x742.jpg"; sourceTree = "<group>"; };
+		092B264F1A4AD1C500302120 /* deer-winter-snow-frost_82985_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "deer-winter-snow-frost_82985_990x742.jpg"; sourceTree = "<group>"; };
+		092B26501A4AD1C500302120 /* egret-fog-reflection_76312_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "egret-fog-reflection_76312_990x742.jpg"; sourceTree = "<group>"; };
+		092B26511A4AD1C500302120 /* fur-seal-dive-peschak_85948_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fur-seal-dive-peschak_85948_990x742.jpg"; sourceTree = "<group>"; };
+		092B26521A4AD1C500302120 /* gray-langur-anand-india_86232_990x742 (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gray-langur-anand-india_86232_990x742 (1).jpg"; sourceTree = "<group>"; };
+		092B26531A4AD1C500302120 /* green-iguana-bonaire-caribbean_82430_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "green-iguana-bonaire-caribbean_82430_990x742.jpg"; sourceTree = "<group>"; };
+		092B26541A4AD1C500302120 /* green-turtle-tenerife_84734_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "green-turtle-tenerife_84734_990x742.jpg"; sourceTree = "<group>"; };
+		092B26551A4AD1C500302120 /* grizzly-bear-yukon-nicklen_75339_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "grizzly-bear-yukon-nicklen_75339_990x742.jpg"; sourceTree = "<group>"; };
+		092B26561A4AD1C500302120 /* gulls-mercury-island-namibia_85946_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gulls-mercury-island-namibia_85946_990x742.jpg"; sourceTree = "<group>"; };
+		092B26571A4AD1C500302120 /* iceland-highlands-horses-stampede_86229_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iceland-highlands-horses-stampede_86229_990x742.jpg"; sourceTree = "<group>"; };
+		092B26581A4AD1C500302120 /* impala-wildlife-delta-botswana_80189_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "impala-wildlife-delta-botswana_80189_990x742.jpg"; sourceTree = "<group>"; };
+		092B26591A4AD1C500302120 /* lion-kalahari-south-africa_82432_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lion-kalahari-south-africa_82432_990x742.jpg"; sourceTree = "<group>"; };
+		092B265A1A4AD1C500302120 /* lioness-mother-maasai-mara_83590_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lioness-mother-maasai-mara_83590_990x742.jpg"; sourceTree = "<group>"; };
+		092B265B1A4AD1C500302120 /* mobula-rays-mexico-underwater_81117_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mobula-rays-mexico-underwater_81117_990x742.jpg"; sourceTree = "<group>"; };
+		092B265C1A4AD1C500302120 /* monkey-water-phuket-thailand_80218_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "monkey-water-phuket-thailand_80218_990x742.jpg"; sourceTree = "<group>"; };
+		092B265D1A4AD1C500302120 /* napoleon-wrasse-coral_84739_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "napoleon-wrasse-coral_84739_990x742.jpg"; sourceTree = "<group>"; };
+		092B265E1A4AD1C500302120 /* owl-stretching-reserve-kuwait_79192_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "owl-stretching-reserve-kuwait_79192_990x742.jpg"; sourceTree = "<group>"; };
+		092B265F1A4AD1C500302120 /* polar-bear-rudolf-russia_82056_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "polar-bear-rudolf-russia_82056_990x742.jpg"; sourceTree = "<group>"; };
+		092B26601A4AD1C500302120 /* puffins-duel-skomer-green_79775_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "puffins-duel-skomer-green_79775_990x742.jpg"; sourceTree = "<group>"; };
+		092B26611A4AD1C500302120 /* social-worker-ants-macro_86239_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "social-worker-ants-macro_86239_990x742.jpg"; sourceTree = "<group>"; };
+		092B26621A4AD1C500302120 /* timberwolves-indiana-howl_76324_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timberwolves-indiana-howl_76324_990x742.jpg"; sourceTree = "<group>"; };
+		092B267F1A4AE26000302120 /* komodo-indonesia-untherthiner_75353_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "komodo-indonesia-untherthiner_75353_990x742.jpg"; sourceTree = "<group>"; };
 		094526851A4A85FF00849DFC /* ZLBalancedFlowLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLBalancedFlowLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		094526891A4A85FF00849DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0945268A1A4A85FF00849DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,30 +97,6 @@
 		0945269F1A4A85FF00849DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094526A01A4A85FF00849DFC /* ZLBalancedFlowLayoutDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLBalancedFlowLayoutDemoTests.swift; sourceTree = "<group>"; };
 		094526AB1A4A861800849DFC /* ZLBalancedFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBalancedFlowLayout.swift; sourceTree = "<group>"; };
-		094526AF1A4A86BC00849DFC /* photo-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-01.jpg"; sourceTree = "<group>"; };
-		094526B01A4A86BC00849DFC /* photo-02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-02.jpg"; sourceTree = "<group>"; };
-		094526B11A4A86BC00849DFC /* photo-03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-03.jpg"; sourceTree = "<group>"; };
-		094526B21A4A86BC00849DFC /* photo-04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-04.jpg"; sourceTree = "<group>"; };
-		094526B31A4A86BC00849DFC /* photo-05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-05.jpg"; sourceTree = "<group>"; };
-		094526B41A4A86BC00849DFC /* photo-06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-06.jpg"; sourceTree = "<group>"; };
-		094526B51A4A86BC00849DFC /* photo-07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-07.jpg"; sourceTree = "<group>"; };
-		094526B61A4A86BC00849DFC /* photo-08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-08.jpg"; sourceTree = "<group>"; };
-		094526B71A4A86BC00849DFC /* photo-09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-09.jpg"; sourceTree = "<group>"; };
-		094526B81A4A86BC00849DFC /* photo-10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-10.jpg"; sourceTree = "<group>"; };
-		094526B91A4A86BC00849DFC /* photo-11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-11.jpg"; sourceTree = "<group>"; };
-		094526BA1A4A86BC00849DFC /* photo-12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-12.jpg"; sourceTree = "<group>"; };
-		094526BB1A4A86BC00849DFC /* photo-13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-13.jpg"; sourceTree = "<group>"; };
-		094526BC1A4A86BC00849DFC /* photo-14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-14.jpg"; sourceTree = "<group>"; };
-		094526BD1A4A86BC00849DFC /* photo-15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-15.jpg"; sourceTree = "<group>"; };
-		094526BE1A4A86BC00849DFC /* photo-16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-16.jpg"; sourceTree = "<group>"; };
-		094526BF1A4A86BC00849DFC /* photo-17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-17.jpg"; sourceTree = "<group>"; };
-		094526C01A4A86BC00849DFC /* photo-18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-18.jpg"; sourceTree = "<group>"; };
-		094526C11A4A86BC00849DFC /* photo-19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-19.jpg"; sourceTree = "<group>"; };
-		094526C21A4A86BC00849DFC /* photo-20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-20.jpg"; sourceTree = "<group>"; };
-		094526C31A4A86BC00849DFC /* photo-21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-21.jpg"; sourceTree = "<group>"; };
-		094526C41A4A86BC00849DFC /* photo-22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-22.jpg"; sourceTree = "<group>"; };
-		094526C51A4A86BC00849DFC /* photo-23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-23.jpg"; sourceTree = "<group>"; };
-		094526C61A4A86BC00849DFC /* photo-24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-24.jpg"; sourceTree = "<group>"; };
 		094526DF1A4AAF4500849DFC /* LabelCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +118,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092B26461A4AD1C500302120 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				092B26471A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg */,
+				092B26481A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg */,
+				092B26491A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg */,
+				092B264A1A4AD1C500302120 /* bear-swimming-kamchatka-russia_82982_990x742.jpg */,
+				092B264B1A4AD1C500302120 /* brown-pelican-atlantic-musi_85704_990x742.jpg */,
+				092B264C1A4AD1C500302120 /* camels-pushkar-fair-india_86225_990x742.jpg */,
+				092B264D1A4AD1C500302120 /* cheetah-rest-south-africa_86226_990x742.jpg */,
+				092B264E1A4AD1C500302120 /* coppery-headed-emerald-hummingbird_83584_990x742.jpg */,
+				092B264F1A4AD1C500302120 /* deer-winter-snow-frost_82985_990x742.jpg */,
+				092B26501A4AD1C500302120 /* egret-fog-reflection_76312_990x742.jpg */,
+				092B267F1A4AE26000302120 /* komodo-indonesia-untherthiner_75353_990x742.jpg */,
+				092B26511A4AD1C500302120 /* fur-seal-dive-peschak_85948_990x742.jpg */,
+				092B26521A4AD1C500302120 /* gray-langur-anand-india_86232_990x742 (1).jpg */,
+				092B26531A4AD1C500302120 /* green-iguana-bonaire-caribbean_82430_990x742.jpg */,
+				092B26541A4AD1C500302120 /* green-turtle-tenerife_84734_990x742.jpg */,
+				092B26551A4AD1C500302120 /* grizzly-bear-yukon-nicklen_75339_990x742.jpg */,
+				092B26561A4AD1C500302120 /* gulls-mercury-island-namibia_85946_990x742.jpg */,
+				092B26571A4AD1C500302120 /* iceland-highlands-horses-stampede_86229_990x742.jpg */,
+				092B26581A4AD1C500302120 /* impala-wildlife-delta-botswana_80189_990x742.jpg */,
+				092B26591A4AD1C500302120 /* lion-kalahari-south-africa_82432_990x742.jpg */,
+				092B265A1A4AD1C500302120 /* lioness-mother-maasai-mara_83590_990x742.jpg */,
+				092B265B1A4AD1C500302120 /* mobula-rays-mexico-underwater_81117_990x742.jpg */,
+				092B265C1A4AD1C500302120 /* monkey-water-phuket-thailand_80218_990x742.jpg */,
+				092B265D1A4AD1C500302120 /* napoleon-wrasse-coral_84739_990x742.jpg */,
+				092B265E1A4AD1C500302120 /* owl-stretching-reserve-kuwait_79192_990x742.jpg */,
+				092B265F1A4AD1C500302120 /* polar-bear-rudolf-russia_82056_990x742.jpg */,
+				092B26601A4AD1C500302120 /* puffins-duel-skomer-green_79775_990x742.jpg */,
+				092B26611A4AD1C500302120 /* social-worker-ants-macro_86239_990x742.jpg */,
+				092B26621A4AD1C500302120 /* timberwolves-indiana-howl_76324_990x742.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		0945267C1A4A85FF00849DFC = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +182,7 @@
 				0945268E1A4A85FF00849DFC /* Main.storyboard */,
 				094526911A4A85FF00849DFC /* Images.xcassets */,
 				094526931A4A85FF00849DFC /* LaunchScreen.xib */,
-				094526AD1A4A86BC00849DFC /* Resources */,
+				092B26461A4AD1C500302120 /* images */,
 				094526881A4A85FF00849DFC /* Supporting Files */,
 			);
 			path = ZLBalancedFlowLayoutDemo;
@@ -173,45 +219,6 @@
 				094526AB1A4A861800849DFC /* ZLBalancedFlowLayout.swift */,
 			);
 			path = ZLBalancedFlowLayout;
-			sourceTree = "<group>";
-		};
-		094526AD1A4A86BC00849DFC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				094526AE1A4A86BC00849DFC /* Images */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		094526AE1A4A86BC00849DFC /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				094526AF1A4A86BC00849DFC /* photo-01.jpg */,
-				094526B01A4A86BC00849DFC /* photo-02.jpg */,
-				094526B11A4A86BC00849DFC /* photo-03.jpg */,
-				094526B21A4A86BC00849DFC /* photo-04.jpg */,
-				094526B31A4A86BC00849DFC /* photo-05.jpg */,
-				094526B41A4A86BC00849DFC /* photo-06.jpg */,
-				094526B51A4A86BC00849DFC /* photo-07.jpg */,
-				094526B61A4A86BC00849DFC /* photo-08.jpg */,
-				094526B71A4A86BC00849DFC /* photo-09.jpg */,
-				094526B81A4A86BC00849DFC /* photo-10.jpg */,
-				094526B91A4A86BC00849DFC /* photo-11.jpg */,
-				094526BA1A4A86BC00849DFC /* photo-12.jpg */,
-				094526BB1A4A86BC00849DFC /* photo-13.jpg */,
-				094526BC1A4A86BC00849DFC /* photo-14.jpg */,
-				094526BD1A4A86BC00849DFC /* photo-15.jpg */,
-				094526BE1A4A86BC00849DFC /* photo-16.jpg */,
-				094526BF1A4A86BC00849DFC /* photo-17.jpg */,
-				094526C01A4A86BC00849DFC /* photo-18.jpg */,
-				094526C11A4A86BC00849DFC /* photo-19.jpg */,
-				094526C21A4A86BC00849DFC /* photo-20.jpg */,
-				094526C31A4A86BC00849DFC /* photo-21.jpg */,
-				094526C41A4A86BC00849DFC /* photo-22.jpg */,
-				094526C51A4A86BC00849DFC /* photo-23.jpg */,
-				094526C61A4A86BC00849DFC /* photo-24.jpg */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,33 +301,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				094526D61A4A86BC00849DFC /* photo-16.jpg in Resources */,
+				092B267E1A4AD1C500302120 /* timberwolves-indiana-howl_76324_990x742.jpg in Resources */,
 				094526901A4A85FF00849DFC /* Main.storyboard in Resources */,
-				094526C91A4A86BC00849DFC /* photo-03.jpg in Resources */,
-				094526DD1A4A86BC00849DFC /* photo-23.jpg in Resources */,
+				092B266D1A4AD1C500302120 /* fur-seal-dive-peschak_85948_990x742.jpg in Resources */,
+				092B26731A4AD1C500302120 /* iceland-highlands-horses-stampede_86229_990x742.jpg in Resources */,
+				092B26691A4AD1C500302120 /* cheetah-rest-south-africa_86226_990x742.jpg in Resources */,
+				092B26701A4AD1C500302120 /* green-turtle-tenerife_84734_990x742.jpg in Resources */,
+				092B266E1A4AD1C500302120 /* gray-langur-anand-india_86232_990x742 (1).jpg in Resources */,
+				092B26741A4AD1C500302120 /* impala-wildlife-delta-botswana_80189_990x742.jpg in Resources */,
+				092B26661A4AD1C500302120 /* bear-swimming-kamchatka-russia_82982_990x742.jpg in Resources */,
+				092B266C1A4AD1C500302120 /* egret-fog-reflection_76312_990x742.jpg in Resources */,
+				092B26671A4AD1C500302120 /* brown-pelican-atlantic-musi_85704_990x742.jpg in Resources */,
+				092B267A1A4AD1C500302120 /* owl-stretching-reserve-kuwait_79192_990x742.jpg in Resources */,
 				094526951A4A85FF00849DFC /* LaunchScreen.xib in Resources */,
-				094526D01A4A86BC00849DFC /* photo-10.jpg in Resources */,
-				094526D51A4A86BC00849DFC /* photo-15.jpg in Resources */,
-				094526CD1A4A86BC00849DFC /* photo-07.jpg in Resources */,
+				092B26711A4AD1C500302120 /* grizzly-bear-yukon-nicklen_75339_990x742.jpg in Resources */,
+				092B267B1A4AD1C500302120 /* polar-bear-rudolf-russia_82056_990x742.jpg in Resources */,
+				092B266B1A4AD1C500302120 /* deer-winter-snow-frost_82985_990x742.jpg in Resources */,
+				092B266F1A4AD1C500302120 /* green-iguana-bonaire-caribbean_82430_990x742.jpg in Resources */,
+				092B266A1A4AD1C500302120 /* coppery-headed-emerald-hummingbird_83584_990x742.jpg in Resources */,
+				092B26781A4AD1C500302120 /* monkey-water-phuket-thailand_80218_990x742.jpg in Resources */,
 				094526921A4A85FF00849DFC /* Images.xcassets in Resources */,
-				094526D31A4A86BC00849DFC /* photo-13.jpg in Resources */,
-				094526CC1A4A86BC00849DFC /* photo-06.jpg in Resources */,
-				094526CE1A4A86BC00849DFC /* photo-08.jpg in Resources */,
-				094526CF1A4A86BC00849DFC /* photo-09.jpg in Resources */,
-				094526DE1A4A86BC00849DFC /* photo-24.jpg in Resources */,
-				094526D41A4A86BC00849DFC /* photo-14.jpg in Resources */,
-				094526DB1A4A86BC00849DFC /* photo-21.jpg in Resources */,
-				094526C81A4A86BC00849DFC /* photo-02.jpg in Resources */,
-				094526D91A4A86BC00849DFC /* photo-19.jpg in Resources */,
-				094526C71A4A86BC00849DFC /* photo-01.jpg in Resources */,
-				094526CA1A4A86BC00849DFC /* photo-04.jpg in Resources */,
-				094526D11A4A86BC00849DFC /* photo-11.jpg in Resources */,
-				094526D21A4A86BC00849DFC /* photo-12.jpg in Resources */,
-				094526D71A4A86BC00849DFC /* photo-17.jpg in Resources */,
-				094526DA1A4A86BC00849DFC /* photo-20.jpg in Resources */,
-				094526D81A4A86BC00849DFC /* photo-18.jpg in Resources */,
-				094526DC1A4A86BC00849DFC /* photo-22.jpg in Resources */,
-				094526CB1A4A86BC00849DFC /* photo-05.jpg in Resources */,
+				092B26751A4AD1C500302120 /* lion-kalahari-south-africa_82432_990x742.jpg in Resources */,
+				092B26791A4AD1C500302120 /* napoleon-wrasse-coral_84739_990x742.jpg in Resources */,
+				092B26771A4AD1C500302120 /* mobula-rays-mexico-underwater_81117_990x742.jpg in Resources */,
+				092B26801A4AE26000302120 /* komodo-indonesia-untherthiner_75353_990x742.jpg in Resources */,
+				092B26761A4AD1C500302120 /* lioness-mother-maasai-mara_83590_990x742.jpg in Resources */,
+				092B267C1A4AD1C500302120 /* puffins-duel-skomer-green_79775_990x742.jpg in Resources */,
+				092B267D1A4AD1C500302120 /* social-worker-ants-macro_86239_990x742.jpg in Resources */,
+				092B26681A4AD1C500302120 /* camels-pushkar-fair-india_86225_990x742.jpg in Resources */,
+				092B26641A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg in Resources */,
+				092B26631A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg in Resources */,
+				092B26651A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg in Resources */,
+				092B26721A4AD1C500302120 /* gulls-mercury-island-namibia_85946_990x742.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +545,7 @@
 				094526A61A4A85FF00849DFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		094526A71A4A85FF00849DFC /* Build configuration list for PBXNativeTarget "ZLBalancedFlowLayoutDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +554,7 @@
 				094526A91A4A85FF00849DFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

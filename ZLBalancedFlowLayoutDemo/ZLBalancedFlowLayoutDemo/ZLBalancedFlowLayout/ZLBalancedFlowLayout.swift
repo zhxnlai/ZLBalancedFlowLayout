@@ -9,7 +9,7 @@
 import UIKit
 
 class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
-    var rowHeight = CGFloat(120)
+    var rowHeight = CGFloat(90)
     
     private var headerFrames = [CGRect](), footerFrames = [CGRect]()
     private var itemFrames = [[CGRect]](), itemOriginYs = [[CGFloat]]()
@@ -19,6 +19,14 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
 
     // MARK: - UICollectionViewLayout
     override func prepareLayout() {
+        
+//        var methodStart1 = NSDate();
+//        super.prepareLayout()
+//        var methodFinish1 = NSDate();
+//        var executionTime1 = methodFinish1.timeIntervalSinceDate(methodStart1)
+//        println("exec time: \(executionTime1)")
+
+//        var methodStart = NSDate();
         resetItemFrames()
         contentSize = CGSizeZero
         
@@ -35,6 +43,9 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
                 footerFrames.append(self.collectionView(collectionView, frameForHeader: false, inSection: section, updateContentSize: &contentSize))
             }
         }
+//        var methodFinish = NSDate();
+//        var executionTime = methodFinish.timeIntervalSinceDate(methodStart)
+//        println("exec time: \(executionTime)")
     }
     
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {

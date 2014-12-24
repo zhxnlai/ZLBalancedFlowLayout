@@ -9,8 +9,7 @@
 import UIKit
 
 class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    let NumImages = 24
-    let Repetition = 20
+    let Repetition = 10
     let NumSections = 1
     var images = [UIImage]()
     
@@ -21,9 +20,9 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override init(collectionViewLayout layout: UICollectionViewLayout!) {
         super.init(collectionViewLayout: layout)
         
-        for (var i=0;i<NumImages;i++) {
-            let name = NSString(format: "photo-%02d.jpg", i)
-            if let image = UIImage(named: name) {
+        var paths = NSBundle.mainBundle().pathsForResourcesOfType("jpg", inDirectory: "") as Array<String>
+        for path in paths {
+            if let image = UIImage(contentsOfFile: path) {
                 images.append(image)
             }
         }
@@ -38,10 +37,17 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         title = "ZLBalancedFlowLayout"
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self , action: Selector("refreshButtonAction:"))
+        
         collectionView?.backgroundColor = UIColor.whiteColor()
         collectionView?.registerClass(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: cellIdentifier)
         collectionView?.registerClass(LabelCollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier)
         collectionView?.registerClass(LabelCollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerIdentifier)
+    }
+
+    // MARK: - Action
+    func refreshButtonAction(sender:UIBarButtonItem) {
+        self.collectionView?.reloadData()
     }
     
     // MARK: - UICollectionViewDataSource
@@ -50,14 +56,15 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return NumImages*Repetition
+        return images.count*Repetition
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as UICollectionViewCell
-        cell.backgroundView = UIImageView(image: imageForIndexPath(indexPath))
-        cell.layer.borderColor = UIColor.whiteColor().CGColor
-        cell.layer.borderWidth = 1
+        var imageView = UIImageView(image: imageForIndexPath(indexPath))
+        imageView.contentMode = .ScaleAspectFill
+        cell.backgroundView = imageView
+        cell.clipsToBounds = true
         return cell
     }
     
@@ -78,7 +85,9 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return imageForIndexPath(indexPath).size
+        var size = imageForIndexPath(indexPath).size
+        var percentWidth = CGFloat(140 - arc4random_uniform(80))/100
+        return CGSize(width: size.width*percentWidth/4, height: size.height/4)
     }
     
     // MARK: - ()
