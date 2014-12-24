@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if let window = window {
             var layout = ZLBalancedFlowLayout()
+//            layout.scrollDirection = .Horizontal
             layout.headerReferenceSize = CGSize(width: 100, height: 100)
             layout.footerReferenceSize = CGSize(width: 100, height: 100)
             layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)

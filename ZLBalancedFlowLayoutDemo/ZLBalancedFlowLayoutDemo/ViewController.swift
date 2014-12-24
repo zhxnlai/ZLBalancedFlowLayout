@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    let Repetition = 10
-    let NumSections = 1
+    let Repetition = 1
+    let NumSections = 2
     var images = [UIImage]()
     
     let cellIdentifier = "cell"

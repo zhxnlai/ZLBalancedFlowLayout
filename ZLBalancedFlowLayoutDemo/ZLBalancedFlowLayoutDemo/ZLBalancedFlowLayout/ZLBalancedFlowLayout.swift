@@ -9,29 +9,24 @@
 import UIKit
 
 class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
-    var rowHeight = CGFloat(90)
+    /// The ideal row height of items in the grid
+    var rowHeight = CGFloat(120)
     
     private var headerFrames = [CGRect](), footerFrames = [CGRect]()
     private var itemFrames = [[CGRect]](), itemOriginYs = [[CGFloat]]()
     private var contentSize = CGSizeZero
     
-    // TODO: both direction, scalesItemToFill, shouldInvalidateLayoutForBoundsChange
+    // TODO: scalesItemToFill, shouldInvalidateLayoutForBoundsChange
 
     // MARK: - UICollectionViewLayout
     override func prepareLayout() {
-        
-//        var methodStart1 = NSDate();
-//        super.prepareLayout()
-//        var methodFinish1 = NSDate();
-//        var executionTime1 = methodFinish1.timeIntervalSinceDate(methodStart1)
-//        println("exec time: \(executionTime1)")
-
-//        var methodStart = NSDate();
         resetItemFrames()
         contentSize = CGSizeZero
         
         if let collectionView = self.collectionView {
-            contentSize = CGSize(width: collectionView.frame.size.width, height: 0)
+            contentSize = scrollDirection == .Vertical ?
+                CGSize(width: collectionView.bounds.width - collectionView.contentInset.left - collectionView.contentInset.right, height: 0) :
+                CGSize(width: 0, height: collectionView.bounds.size.height - collectionView.contentInset.top - collectionView.contentInset.bottom)
             
             for (var section = 0; section < collectionView.numberOfSections();section++) {
                 headerFrames.append(self.collectionView(collectionView, frameForHeader: true, inSection: section, updateContentSize: &contentSize))
@@ -43,9 +38,6 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
                 footerFrames.append(self.collectionView(collectionView, frameForHeader: false, inSection: section, updateContentSize: &contentSize))
             }
         }
-//        var methodFinish = NSDate();
-//        var executionTime = methodFinish.timeIntervalSinceDate(methodStart)
-//        println("exec time: \(executionTime)")
     }
     
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
@@ -63,8 +55,16 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
                     layoutAttributes.append(footerAttributes)
                 }
                 
-                let lowerIndex = binarySearch(itemOriginYs[section], value: CGRectGetMinY(rect)-CGRectGetHeight(rect))
-                let upperIndex = binarySearch(itemOriginYs[section], value: CGRectGetMaxY(rect))
+                var minY = CGFloat(0), maxY = CGFloat(0)
+                if (scrollDirection == .Vertical) {
+                    minY = CGRectGetMinY(rect)-CGRectGetHeight(rect)
+                    maxY = CGRectGetMaxY(rect)
+                } else {
+                    minY = CGRectGetMinX(rect)-CGRectGetWidth(rect)
+                    maxY = CGRectGetMaxX(rect)
+                }
+                let lowerIndex = binarySearch(itemOriginYs[section], value: minY)
+                let upperIndex = binarySearch(itemOriginYs[section], value: maxY)
                 
                 for (var item = lowerIndex; item<upperIndex; item++) {
                     layoutAttributes.append(self.layoutAttributesForItemAtIndexPath(NSIndexPath(forItem: item, inSection: section)))
@@ -98,12 +98,15 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         
         return attributes
     }
+    
+    override func collectionViewContentSize() -> CGSize {
+        return contentSize
+    }
 
     // MARK: - UICollectionViewLayout Helpers
     private func collectionView(collectionView:UICollectionView, frameForHeader isForHeader:Bool, inSection section:Int, inout updateContentSize contentSize:CGSize) -> CGRect {
-        var size = referenceSizeForHeader(isForHeader, inSection: section)
-        var frame = CGRectZero
-        if (self.scrollDirection == .Vertical) {
+        var size = referenceSizeForHeader(isForHeader, inSection: section), frame = CGRectZero
+        if (scrollDirection == .Vertical) {
             frame = CGRect(x: 0, y: contentSize.height, width: CGRectGetWidth(collectionView.bounds), height: size.height);
             contentSize = CGSize(width: contentSize.width, height: contentSize.height+size.height)
         } else {
@@ -114,38 +117,62 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     }
     
     private func collectionView(collectionView:UICollectionView, framesForItemsInSection section:Int, inout updateContentSize contentSize:CGSize) -> ([CGRect], [CGFloat]) {
-        var maxWidth = Float(contentSize.width), widths = [Float]()
+        var maxWidth = Float(scrollDirection == .Vertical ? contentSize.width : contentSize.height), widths = [Float]()
         for (var item = 0; item < collectionView.numberOfItemsInSection(section);item++) {
-            let itemSize = sizeForItemAtIndexPath(NSIndexPath(forItem: item, inSection: section))
-            widths.append(min(Float(itemSize.width/itemSize.height*rowHeight), Float(maxWidth)))
+            let itemSize = sizeForItemAtIndexPath(NSIndexPath(forItem: item, inSection: section)),
+            ratio = scrollDirection == .Vertical ?
+                itemSize.width/itemSize.height :
+                itemSize.height/itemSize.width
+            widths.append(min(Float(ratio*rowHeight), Float(maxWidth)))
         }
         
         // parition widths
-        var partitions = self.partition(widths, max: Float(maxWidth))
+        var partitions = partition(widths, max: Float(maxWidth))
         
-        let minimumInteritemSpacing = minimumInteritemSpacingForSection(section), minimumLineSpacing = minimumLineSpacingForSection(section), inset = insetForSection(section)
-        var framesInSection = [CGRect](), originYsInSection = [CGFloat](), origin = CGPoint(x: inset.left, y: contentSize.height+inset.top);
+        let minimumInteritemSpacing = minimumInteritemSpacingForSection(section),
+        minimumLineSpacing = minimumLineSpacingForSection(section),
+        inset = insetForSection(section)
+        var framesInSection = [CGRect](), originYsInSection = [CGFloat](),
+        origin = scrollDirection == .Vertical ?
+            CGPoint(x: inset.left, y: contentSize.height+inset.top) :
+            CGPoint(x: contentSize.width+inset.left, y: inset.top)
 
         for row in partitions {
             // contentWidth/summedWidth
-            let contentWidth = maxWidth - Float(inset.left+inset.right) - Float(CGFloat(row.count-1)*minimumInteritemSpacing)
-            let ratio = CGFloat(contentWidth/row.reduce(0, combine: { (acc, width) -> Float in acc+width }))
+            let innerMargin = Float(CGFloat(row.count-1)*minimumInteritemSpacing),
+            outterMargin = scrollDirection == .Vertical ?
+                Float(inset.left+inset.right) :
+                Float(inset.top+inset.bottom),
+            contentWidth = maxWidth - outterMargin - innerMargin,
+            ratio = CGFloat(contentWidth/row.reduce(0, combine: { (acc, width) -> Float in acc+width }))
             for width in row {
-                let frame = CGRect(origin: origin, size: CGSize(width: CGFloat(width)*ratio, height: rowHeight*ratio))
+                let size = scrollDirection == .Vertical ?
+                    CGSize(width: CGFloat(width)*ratio, height: rowHeight*ratio) :
+                    CGSize(width: rowHeight*ratio, height: CGFloat(width)*ratio)
+                let frame = CGRect(origin: origin, size: size)
                 framesInSection.append(frame)
-                origin = CGPoint(x: origin.x+frame.width+minimumInteritemSpacing, y: origin.y)
-                originYsInSection.append(origin.y)
+                if scrollDirection == .Vertical {
+                    origin = CGPoint(x: origin.x+frame.width+minimumInteritemSpacing, y: origin.y)
+                    originYsInSection.append(origin.y)
+                } else {
+                    origin = CGPoint(x: origin.x, y: origin.y+frame.height+minimumInteritemSpacing)
+                    originYsInSection.append(origin.x)
+                }
             }
-            origin = CGPoint(x: inset.left, y: origin.y+framesInSection.last!.height+minimumLineSpacing+inset.bottom)
+            if scrollDirection == .Vertical {
+                origin = CGPoint(x: inset.left, y: origin.y+framesInSection.last!.height+minimumLineSpacing+inset.bottom)
+            } else {
+                origin = CGPoint(x: origin.x+framesInSection.last!.width+minimumLineSpacing+inset.right, y: inset.top)
+            }
         }
         
-        contentSize = CGSize(width: contentSize.width, height: origin.y)
+        if scrollDirection == .Vertical {
+            contentSize = CGSize(width: contentSize.width, height: origin.y)
+        } else {
+            contentSize = CGSize(width: origin.x, height: contentSize.height)
+        }
         
         return (framesInSection, originYsInSection)
-    }
-    
-    override func collectionViewContentSize() -> CGSize {
-        return contentSize
     }
     
     private func resetItemFrames() {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091033EB1A4B6365000BB27C /* gray-langur-anand-india_86232_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 091033E91A4B6365000BB27C /* gray-langur-anand-india_86232_990x742.jpg */; };
+		091033EC1A4B6365000BB27C /* otter-running-united-kingdom_81118_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 091033EA1A4B6365000BB27C /* otter-running-united-kingdom_81118_990x742.jpg */; };
 		092B26631A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26471A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg */; };
 		092B26641A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26481A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg */; };
 		092B26651A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26491A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg */; };
@@ -18,7 +20,6 @@
 		092B266B1A4AD1C500302120 /* deer-winter-snow-frost_82985_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B264F1A4AD1C500302120 /* deer-winter-snow-frost_82985_990x742.jpg */; };
 		092B266C1A4AD1C500302120 /* egret-fog-reflection_76312_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26501A4AD1C500302120 /* egret-fog-reflection_76312_990x742.jpg */; };
 		092B266D1A4AD1C500302120 /* fur-seal-dive-peschak_85948_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26511A4AD1C500302120 /* fur-seal-dive-peschak_85948_990x742.jpg */; };
-		092B266E1A4AD1C500302120 /* gray-langur-anand-india_86232_990x742 (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26521A4AD1C500302120 /* gray-langur-anand-india_86232_990x742 (1).jpg */; };
 		092B266F1A4AD1C500302120 /* green-iguana-bonaire-caribbean_82430_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26531A4AD1C500302120 /* green-iguana-bonaire-caribbean_82430_990x742.jpg */; };
 		092B26701A4AD1C500302120 /* green-turtle-tenerife_84734_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26541A4AD1C500302120 /* green-turtle-tenerife_84734_990x742.jpg */; };
 		092B26711A4AD1C500302120 /* grizzly-bear-yukon-nicklen_75339_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26551A4AD1C500302120 /* grizzly-bear-yukon-nicklen_75339_990x742.jpg */; };
@@ -57,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		091033E91A4B6365000BB27C /* gray-langur-anand-india_86232_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gray-langur-anand-india_86232_990x742.jpg"; sourceTree = "<group>"; };
+		091033EA1A4B6365000BB27C /* otter-running-united-kingdom_81118_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "otter-running-united-kingdom_81118_990x742.jpg"; sourceTree = "<group>"; };
 		092B26471A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "american-crocodile-caribbean-sea_82044_990x742.jpg"; sourceTree = "<group>"; };
 		092B26481A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "atlantic-walrus-greenland-nicklen_75331_990x742.jpg"; sourceTree = "<group>"; };
 		092B26491A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bald-eagles-birds-talons_86760_990x742.jpg"; sourceTree = "<group>"; };
@@ -68,7 +71,6 @@
 		092B264F1A4AD1C500302120 /* deer-winter-snow-frost_82985_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "deer-winter-snow-frost_82985_990x742.jpg"; sourceTree = "<group>"; };
 		092B26501A4AD1C500302120 /* egret-fog-reflection_76312_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "egret-fog-reflection_76312_990x742.jpg"; sourceTree = "<group>"; };
 		092B26511A4AD1C500302120 /* fur-seal-dive-peschak_85948_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fur-seal-dive-peschak_85948_990x742.jpg"; sourceTree = "<group>"; };
-		092B26521A4AD1C500302120 /* gray-langur-anand-india_86232_990x742 (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gray-langur-anand-india_86232_990x742 (1).jpg"; sourceTree = "<group>"; };
 		092B26531A4AD1C500302120 /* green-iguana-bonaire-caribbean_82430_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "green-iguana-bonaire-caribbean_82430_990x742.jpg"; sourceTree = "<group>"; };
 		092B26541A4AD1C500302120 /* green-turtle-tenerife_84734_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "green-turtle-tenerife_84734_990x742.jpg"; sourceTree = "<group>"; };
 		092B26551A4AD1C500302120 /* grizzly-bear-yukon-nicklen_75339_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "grizzly-bear-yukon-nicklen_75339_990x742.jpg"; sourceTree = "<group>"; };
@@ -133,8 +135,9 @@
 				092B26501A4AD1C500302120 /* egret-fog-reflection_76312_990x742.jpg */,
 				092B267F1A4AE26000302120 /* komodo-indonesia-untherthiner_75353_990x742.jpg */,
 				092B26511A4AD1C500302120 /* fur-seal-dive-peschak_85948_990x742.jpg */,
-				092B26521A4AD1C500302120 /* gray-langur-anand-india_86232_990x742 (1).jpg */,
 				092B26531A4AD1C500302120 /* green-iguana-bonaire-caribbean_82430_990x742.jpg */,
+				091033E91A4B6365000BB27C /* gray-langur-anand-india_86232_990x742.jpg */,
+				091033EA1A4B6365000BB27C /* otter-running-united-kingdom_81118_990x742.jpg */,
 				092B26541A4AD1C500302120 /* green-turtle-tenerife_84734_990x742.jpg */,
 				092B26551A4AD1C500302120 /* grizzly-bear-yukon-nicklen_75339_990x742.jpg */,
 				092B26561A4AD1C500302120 /* gulls-mercury-island-namibia_85946_990x742.jpg */,
@@ -307,7 +310,6 @@
 				092B26731A4AD1C500302120 /* iceland-highlands-horses-stampede_86229_990x742.jpg in Resources */,
 				092B26691A4AD1C500302120 /* cheetah-rest-south-africa_86226_990x742.jpg in Resources */,
 				092B26701A4AD1C500302120 /* green-turtle-tenerife_84734_990x742.jpg in Resources */,
-				092B266E1A4AD1C500302120 /* gray-langur-anand-india_86232_990x742 (1).jpg in Resources */,
 				092B26741A4AD1C500302120 /* impala-wildlife-delta-botswana_80189_990x742.jpg in Resources */,
 				092B26661A4AD1C500302120 /* bear-swimming-kamchatka-russia_82982_990x742.jpg in Resources */,
 				092B266C1A4AD1C500302120 /* egret-fog-reflection_76312_990x742.jpg in Resources */,
@@ -325,6 +327,7 @@
 				092B26791A4AD1C500302120 /* napoleon-wrasse-coral_84739_990x742.jpg in Resources */,
 				092B26771A4AD1C500302120 /* mobula-rays-mexico-underwater_81117_990x742.jpg in Resources */,
 				092B26801A4AE26000302120 /* komodo-indonesia-untherthiner_75353_990x742.jpg in Resources */,
+				091033EB1A4B6365000BB27C /* gray-langur-anand-india_86232_990x742.jpg in Resources */,
 				092B26761A4AD1C500302120 /* lioness-mother-maasai-mara_83590_990x742.jpg in Resources */,
 				092B267C1A4AD1C500302120 /* puffins-duel-skomer-green_79775_990x742.jpg in Resources */,
 				092B267D1A4AD1C500302120 /* social-worker-ants-macro_86239_990x742.jpg in Resources */,
@@ -333,6 +336,7 @@
 				092B26631A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg in Resources */,
 				092B26651A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg in Resources */,
 				092B26721A4AD1C500302120 /* gulls-mercury-island-namibia_85946_990x742.jpg in Resources */,
+				091033EC1A4B6365000BB27C /* otter-running-united-kingdom_81118_990x742.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
