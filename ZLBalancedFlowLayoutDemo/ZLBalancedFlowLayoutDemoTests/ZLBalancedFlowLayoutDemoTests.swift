@@ -1,15 +1,15 @@
 //
-//  ZLLazyBalancedFlowLayoutDemoTests.swift
-//  ZLLazyBalancedFlowLayoutDemoTests
+//  ZLBalancedFlowLayoutDemoTests.swift
+//  ZLBalancedFlowLayoutDemoTests
 //
-//  Created by Zhixuan Lai on 12/20/14.
+//  Created by Zhixuan Lai on 12/23/14.
 //  Copyright (c) 2014 Zhixuan Lai. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class ZLLazyBalancedFlowLayoutDemoTests: XCTestCase {
+class ZLBalancedFlowLayoutDemoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

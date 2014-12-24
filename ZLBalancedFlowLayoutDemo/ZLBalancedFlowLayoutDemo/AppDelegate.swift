@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  ZLLazyBalancedFlowLayoutDemo
+//  ZLBalancedFlowLayoutDemo
 //
-//  Created by Zhixuan Lai on 12/20/14.
+//  Created by Zhixuan Lai on 12/23/14.
 //  Copyright (c) 2014 Zhixuan Lai. All rights reserved.
 //
 
@@ -13,24 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if let window = window {
-            //            window.backgroundColor = UIColor.whiteColor()
-            var layout = ZLLazyBalancedFlowLayout()
-
+            var layout = ZLBalancedFlowLayout()
+            layout.headerReferenceSize = CGSize(width: 100, height: 100)
+            layout.footerReferenceSize = CGSize(width: 100, height: 100)
+            layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
             var viewController = ViewController(collectionViewLayout: layout)
-            
-            
-            window.rootViewController = viewController
+            window.rootViewController = UINavigationController(rootViewController: viewController)
             window.makeKeyAndVisible()
         }
-        
-
         return true
     }
 
