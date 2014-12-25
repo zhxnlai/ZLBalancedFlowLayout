@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		091033EB1A4B6365000BB27C /* gray-langur-anand-india_86232_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 091033E91A4B6365000BB27C /* gray-langur-anand-india_86232_990x742.jpg */; };
 		091033EC1A4B6365000BB27C /* otter-running-united-kingdom_81118_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 091033EA1A4B6365000BB27C /* otter-running-united-kingdom_81118_990x742.jpg */; };
+		091033EF1A4B9BFA000BB27C /* ZLBalancedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091033EE1A4B9BFA000BB27C /* ZLBalancedFlowLayout.swift */; };
 		092B26631A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26471A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg */; };
 		092B26641A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26481A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg */; };
 		092B26651A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26491A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg */; };
@@ -43,7 +44,6 @@
 		094526921A4A85FF00849DFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094526911A4A85FF00849DFC /* Images.xcassets */; };
 		094526951A4A85FF00849DFC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094526931A4A85FF00849DFC /* LaunchScreen.xib */; };
 		094526A11A4A85FF00849DFC /* ZLBalancedFlowLayoutDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094526A01A4A85FF00849DFC /* ZLBalancedFlowLayoutDemoTests.swift */; };
-		094526AC1A4A861800849DFC /* ZLBalancedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094526AB1A4A861800849DFC /* ZLBalancedFlowLayout.swift */; };
 		094526E01A4AAF4500849DFC /* LabelCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094526DF1A4AAF4500849DFC /* LabelCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +60,7 @@
 /* Begin PBXFileReference section */
 		091033E91A4B6365000BB27C /* gray-langur-anand-india_86232_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gray-langur-anand-india_86232_990x742.jpg"; sourceTree = "<group>"; };
 		091033EA1A4B6365000BB27C /* otter-running-united-kingdom_81118_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "otter-running-united-kingdom_81118_990x742.jpg"; sourceTree = "<group>"; };
+		091033EE1A4B9BFA000BB27C /* ZLBalancedFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBalancedFlowLayout.swift; sourceTree = "<group>"; };
 		092B26471A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "american-crocodile-caribbean-sea_82044_990x742.jpg"; sourceTree = "<group>"; };
 		092B26481A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "atlantic-walrus-greenland-nicklen_75331_990x742.jpg"; sourceTree = "<group>"; };
 		092B26491A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bald-eagles-birds-talons_86760_990x742.jpg"; sourceTree = "<group>"; };
@@ -98,7 +99,6 @@
 		0945269A1A4A85FF00849DFC /* ZLBalancedFlowLayoutDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZLBalancedFlowLayoutDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0945269F1A4A85FF00849DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094526A01A4A85FF00849DFC /* ZLBalancedFlowLayoutDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLBalancedFlowLayoutDemoTests.swift; sourceTree = "<group>"; };
-		094526AB1A4A861800849DFC /* ZLBalancedFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBalancedFlowLayout.swift; sourceTree = "<group>"; };
 		094526DF1A4AAF4500849DFC /* LabelCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		091033ED1A4B9BFA000BB27C /* ZLBalancedFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				091033EE1A4B9BFA000BB27C /* ZLBalancedFlowLayout.swift */,
+			);
+			name = ZLBalancedFlowLayout;
+			path = ../../ZLBalancedFlowLayout;
+			sourceTree = "<group>";
+		};
 		092B26461A4AD1C500302120 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +187,7 @@
 		094526871A4A85FF00849DFC /* ZLBalancedFlowLayoutDemo */ = {
 			isa = PBXGroup;
 			children = (
-				094526AA1A4A861800849DFC /* ZLBalancedFlowLayout */,
+				091033ED1A4B9BFA000BB27C /* ZLBalancedFlowLayout */,
 				0945268A1A4A85FF00849DFC /* AppDelegate.swift */,
 				0945268C1A4A85FF00849DFC /* ViewController.swift */,
 				094526DF1A4AAF4500849DFC /* LabelCollectionReusableView.swift */,
@@ -214,14 +223,6 @@
 				0945269F1A4A85FF00849DFC /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		094526AA1A4A861800849DFC /* ZLBalancedFlowLayout */ = {
-			isa = PBXGroup;
-			children = (
-				094526AB1A4A861800849DFC /* ZLBalancedFlowLayout.swift */,
-			);
-			path = ZLBalancedFlowLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,10 +355,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				094526AC1A4A861800849DFC /* ZLBalancedFlowLayout.swift in Sources */,
 				0945268D1A4A85FF00849DFC /* ViewController.swift in Sources */,
 				094526E01A4AAF4500849DFC /* LabelCollectionReusableView.swift in Sources */,
 				0945268B1A4A85FF00849DFC /* AppDelegate.swift in Sources */,
+				091033EF1A4B9BFA000BB27C /* ZLBalancedFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
