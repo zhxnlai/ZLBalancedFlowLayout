@@ -10,13 +10,24 @@ import UIKit
 
 class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     /// The ideal row height of items in the grid
-    var rowHeight = CGFloat(120)
+    var rowHeight: CGFloat = 120 {
+        didSet {
+            invalidateLayout()
+        }
+    }
+    
+    /// The option to enforce the ideal row height by changing the aspect ratio of the item if necessary.
+    var enforcesRowHeight: Bool = false {
+        didSet {
+            invalidateLayout()
+        }
+    }
     
     private var headerFrames = [CGRect](), footerFrames = [CGRect]()
     private var itemFrames = [[CGRect]](), itemOriginYs = [[CGFloat]]()
     private var contentSize = CGSizeZero
     
-    // TODO: scalesItemToFill, shouldInvalidateLayoutForBoundsChange
+    // TODO: shouldInvalidateLayoutForBoundsChange
 
     // MARK: - UICollectionViewLayout
     override func prepareLayout() {
@@ -44,6 +55,7 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
         
         if let collectionView = self.collectionView {
+            // can be further optimized
             for (var section = 0; section < collectionView.numberOfSections();section++) {
                 var sectionIndexPath = NSIndexPath(forItem: 0, inSection: section)
                 let headerAttributes = layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionHeader, atIndexPath: sectionIndexPath)
@@ -144,11 +156,12 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
                 Float(inset.left+inset.right) :
                 Float(inset.top+inset.bottom),
             contentWidth = maxWidth - outterMargin - innerMargin,
-            ratio = CGFloat(contentWidth/row.reduce(0, combine: { (acc, width) -> Float in acc+width }))
+            widthRatio = CGFloat(contentWidth/row.reduce(0, combine: { (acc, width) -> Float in acc+width })),
+            heightRatio = enforcesRowHeight ? 1 : widthRatio
             for width in row {
                 let size = scrollDirection == .Vertical ?
-                    CGSize(width: CGFloat(width)*ratio, height: rowHeight*ratio) :
-                    CGSize(width: rowHeight*ratio, height: CGFloat(width)*ratio)
+                    CGSize(width: CGFloat(width)*widthRatio, height: rowHeight*heightRatio) :
+                    CGSize(width: rowHeight*heightRatio, height: CGFloat(width)*widthRatio)
                 let frame = CGRect(origin: origin, size: size)
                 framesInSection.append(frame)
                 if scrollDirection == .Vertical {
