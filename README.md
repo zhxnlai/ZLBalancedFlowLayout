@@ -22,12 +22,25 @@ Use `rowHeight` to adjust the item height.
 ~~~swift
 /// The ideal row height of items in the grid
 var rowHeight = CGFloat(120)
+
+/// The option to enforce the ideal row height by changing the aspect ratio of the item if necessary.
+var enforcesRowHeight = false
 ~~~
 
 Benchmarks
 ---
 ZLBalancedFlowLayout uses dynamic programming techniques to find the optimal partition of cells upfront.
 The benchmarks are based on timings of `prepareLayout`:
+
+###iPhone 6
+NumSections|NumItemsPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
+---|---|---|---
+1   | 100   | 0.0517209768295288 | 0.00196903944015503
+1   | 1000  | 0.565874993801117 | 0.0149750113487244
+1   | 3000 | Recursion overflow, not yet tail optimized | 0.0408549904823303
+10  | 100   | 0.523442983627319 | 0.0157199501991272
+10  | 1000  | 5.28750801086426 | 0.130671977996826
+100 | 100   | 4.89241003990173 | 0.118210017681122
 
 ###iOS simulator
 NumSections|NumItemsPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
@@ -39,16 +52,6 @@ NumSections|NumItemsPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
 10|1000|2.26102298498154|0.0399309992790222
 100|100|1.60317003726959|0.0364070534706116
 100|1000|21.678355038166|0.385994970798492
-
-###iPhone 6
-NumSections|NumItemsPerSection|ZLBalancedFlowLayout|UICollectionViewFlowLayout
----|---|---|---
-1   | 100   | 0.0517209768295288 | 0.00196903944015503
-1   | 1000  | 0.565874993801117 | 0.0149750113487244
-1   | 3000 | Recursion overflow, not yet tail optimized | 0.0408549904823303
-10  | 100   | 0.523442983627319 | 0.0157199501991272
-10  | 1000  | 5.28750801086426 | 0.130671977996826
-100 | 100   | 4.89241003990173 | 0.118210017681122
 
 Requirements
 ---
