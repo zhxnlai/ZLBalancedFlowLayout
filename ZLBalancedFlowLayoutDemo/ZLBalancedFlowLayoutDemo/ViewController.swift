@@ -9,13 +9,38 @@
 import UIKit
 
 class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    let Repetition = 1
-    let NumSections = 2
-    var images = [UIImage]()
+    var numRepetitions: Int = 1 {
+        didSet {
+            collectionView?.reloadData()
+        }
+    }
     
-    let cellIdentifier = "cell"
-    let headerIdentifier = "header"
-    let footerIdentifier = "footer"
+    var numSections: Int = 20  {
+        didSet {
+            collectionView?.reloadData()
+        }
+    }
+    
+    var direction: UICollectionViewScrollDirection = .Vertical {
+        didSet {
+            needsResetLayout = true
+        }
+    }
+    
+    var rowHeight: CGFloat = 120  {
+        didSet {
+            needsResetLayout = true
+        }
+    }
+
+    var enforcesRowHeight: Bool = false  {
+        didSet {
+            needsResetLayout = true
+        }
+    }
+
+    private var images = [UIImage](), needsResetLayout = false
+    private let cellIdentifier = "cell", headerIdentifier = "header", footerIdentifier = "footer"
 
     override init(collectionViewLayout layout: UICollectionViewLayout!) {
         super.init(collectionViewLayout: layout)
@@ -38,11 +63,33 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         title = "ZLBalancedFlowLayout"
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self , action: Selector("refreshButtonAction:"))
-        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: Selector("settingsButtonAction:"))
+
         collectionView?.backgroundColor = UIColor.whiteColor()
         collectionView?.registerClass(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: cellIdentifier)
         collectionView?.registerClass(LabelCollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier)
         collectionView?.registerClass(LabelCollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerIdentifier)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        resetLayoutIfNeeded(animated)
+    }
+    
+    private func resetLayoutIfNeeded(animated: Bool) {
+        if needsResetLayout {
+            needsResetLayout = false
+            
+            var layout = ZLBalancedFlowLayout()
+            layout.headerReferenceSize = CGSize(width: 100, height: 100)
+            layout.footerReferenceSize = CGSize(width: 100, height: 100)
+            layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+            layout.scrollDirection = direction
+            layout.rowHeight = rowHeight
+            layout.enforcesRowHeight = enforcesRowHeight
+            
+            collectionView?.setCollectionViewLayout(layout, animated: true)
+        }
     }
 
     // MARK: - Action
@@ -50,13 +97,17 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         self.collectionView?.reloadData()
     }
     
+    func settingsButtonAction(sender:UIBarButtonItem) {
+        SettingsViewController.presentInViewController(self)
+    }
+    
     // MARK: - UICollectionViewDataSource
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return NumSections
+        return numSections
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count*Repetition
+        return images.count*numRepetitions
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

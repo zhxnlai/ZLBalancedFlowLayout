@@ -45,6 +45,7 @@
 		094526951A4A85FF00849DFC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094526931A4A85FF00849DFC /* LaunchScreen.xib */; };
 		094526A11A4A85FF00849DFC /* ZLBalancedFlowLayoutDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094526A01A4A85FF00849DFC /* ZLBalancedFlowLayoutDemoTests.swift */; };
 		094526E01A4AAF4500849DFC /* LabelCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094526DF1A4AAF4500849DFC /* LabelCollectionReusableView.swift */; };
+		096B17B41A56337F00D163EE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B17B31A56337F00D163EE /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		0945269F1A4A85FF00849DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094526A01A4A85FF00849DFC /* ZLBalancedFlowLayoutDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLBalancedFlowLayoutDemoTests.swift; sourceTree = "<group>"; };
 		094526DF1A4AAF4500849DFC /* LabelCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCollectionReusableView.swift; sourceTree = "<group>"; };
+		096B17B31A56337F00D163EE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				091033ED1A4B9BFA000BB27C /* ZLBalancedFlowLayout */,
 				0945268A1A4A85FF00849DFC /* AppDelegate.swift */,
 				0945268C1A4A85FF00849DFC /* ViewController.swift */,
+				096B17B31A56337F00D163EE /* SettingsViewController.swift */,
 				094526DF1A4AAF4500849DFC /* LabelCollectionReusableView.swift */,
 				0945268E1A4A85FF00849DFC /* Main.storyboard */,
 				094526911A4A85FF00849DFC /* Images.xcassets */,
@@ -358,6 +361,7 @@
 				0945268D1A4A85FF00849DFC /* ViewController.swift in Sources */,
 				094526E01A4AAF4500849DFC /* LabelCollectionReusableView.swift in Sources */,
 				0945268B1A4A85FF00849DFC /* AppDelegate.swift in Sources */,
+				096B17B41A56337F00D163EE /* SettingsViewController.swift in Sources */,
 				091033EF1A4B9BFA000BB27C /* ZLBalancedFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
