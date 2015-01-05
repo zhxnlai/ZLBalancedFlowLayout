@@ -157,7 +157,7 @@ class SettingsViewController : UITableViewController {
                 var slider = UISlider()
                 slider.addTarget(self, action: Selector("numSectionsSliderAction:"), forControlEvents: .ValueChanged)
                 if let demoViewController = demoViewController {
-                    slider.value = Float((demoViewController.numSections-1)/19)
+                    slider.value = Float(demoViewController.numSections-1)/19.0
                     cell.detailTextLabel!.text = "\(demoViewController.numSections)"
                 }
                 cell.accessoryView = slider
@@ -167,7 +167,7 @@ class SettingsViewController : UITableViewController {
                 var slider = UISlider()
                 slider.addTarget(self, action: Selector("numRepetitionsSliderAction:"), forControlEvents: .ValueChanged)
                 if let demoViewController = demoViewController {
-                    slider.value = Float((demoViewController.numRepetitions-1)/19)
+                    slider.value = Float(demoViewController.numRepetitions-1)/19.0
                     cell.detailTextLabel!.text = "\(demoViewController.numRepetitions)"
                 }
                 cell.accessoryView = slider

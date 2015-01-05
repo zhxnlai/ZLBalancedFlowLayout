@@ -15,7 +15,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
     }
     
-    var numSections: Int = 20  {
+    var numSections: Int = 10  {
         didSet {
             collectionView?.reloadData()
         }
@@ -27,7 +27,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
     }
     
-    var rowHeight: CGFloat = 120  {
+    var rowHeight: CGFloat = 100  {
         didSet {
             needsResetLayout = true
         }
