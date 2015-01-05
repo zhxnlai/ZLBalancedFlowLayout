@@ -10,7 +10,7 @@ import UIKit
 
 class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     /// The ideal row height of items in the grid
-    var rowHeight: CGFloat = 120 {
+    var rowHeight: CGFloat = 100 {
         didSet {
             invalidateLayout()
         }
@@ -39,7 +39,7 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
                 CGSize(width: collectionView.bounds.width - collectionView.contentInset.left - collectionView.contentInset.right, height: 0) :
                 CGSize(width: 0, height: collectionView.bounds.size.height - collectionView.contentInset.top - collectionView.contentInset.bottom)
             
-            for (var section = 0; section < collectionView.numberOfSections();section++) {
+            for section in (0..<collectionView.numberOfSections()) {
                 headerFrames.append(self.collectionView(collectionView, frameForHeader: true, inSection: section, updateContentSize: &contentSize))
                 
                 let (frames, originYs) = self.collectionView(collectionView, framesForItemsInSection: section, updateContentSize: &contentSize)
@@ -56,7 +56,7 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         
         if let collectionView = self.collectionView {
             // can be further optimized
-            for (var section = 0; section < collectionView.numberOfSections();section++) {
+            for section in (0..<collectionView.numberOfSections()) {
                 var sectionIndexPath = NSIndexPath(forItem: 0, inSection: section)
                 let headerAttributes = layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionHeader, atIndexPath: sectionIndexPath)
                 if headerAttributes.frame.size != CGSizeZero && CGRectIntersectsRect(headerAttributes.frame, rect) {
@@ -78,7 +78,7 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
                 let lowerIndex = binarySearch(itemOriginYs[section], value: minY)
                 let upperIndex = binarySearch(itemOriginYs[section], value: maxY)
                 
-                for (var item = lowerIndex; item<upperIndex; item++) {
+                for item in lowerIndex..<upperIndex {
                     layoutAttributes.append(self.layoutAttributesForItemAtIndexPath(NSIndexPath(forItem: item, inSection: section)))
                 }
             }
@@ -129,14 +129,14 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     }
     
     private func collectionView(collectionView:UICollectionView, framesForItemsInSection section:Int, inout updateContentSize contentSize:CGSize) -> ([CGRect], [CGFloat]) {
-        var maxWidth = Float(scrollDirection == .Vertical ? contentSize.width : contentSize.height), widths = [Float]()
-        for (var item = 0; item < collectionView.numberOfItemsInSection(section);item++) {
-            let itemSize = sizeForItemAtIndexPath(NSIndexPath(forItem: item, inSection: section)),
-            ratio = scrollDirection == .Vertical ?
+        let maxWidth = Float(scrollDirection == .Vertical ? contentSize.width : contentSize.height),
+        widths = map(0..<collectionView.numberOfItemsInSection(section), {(item: Int) -> Float in
+            let itemSize = self.sizeForItemAtIndexPath(NSIndexPath(forItem: item, inSection: section)),
+            ratio = self.scrollDirection == .Vertical ?
                 itemSize.width/itemSize.height :
                 itemSize.height/itemSize.width
-            widths.append(min(Float(ratio*rowHeight), Float(maxWidth)))
-        }
+            return min(Float(ratio*self.rowHeight), Float(maxWidth))
+        })
         
         // parition widths
         var partitions = partition(widths, max: Float(maxWidth))
@@ -156,7 +156,7 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
                 Float(inset.left+inset.right) :
                 Float(inset.top+inset.bottom),
             contentWidth = maxWidth - outterMargin - innerMargin,
-            widthRatio = CGFloat(contentWidth/row.reduce(0, combine: { (acc, width) -> Float in acc+width })),
+            widthRatio = CGFloat(contentWidth/row.reduce(0, combine: +)),
             heightRatio = enforcesRowHeight ? 1 : widthRatio
             for width in row {
                 let size = scrollDirection == .Vertical ?
@@ -280,14 +280,12 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     private func partition(values: [Float], max:Float) -> [[Float]] {
         var numValues = values.count
         
-        // matrix of panelty, i: from, j: to
-        var slacks = [[Float]](count:numValues+1, repeatedValue: [Float](count:numValues+1, repeatedValue: Float.infinity))
-        for (var i=0; i<=numValues; i++) {
-            slacks[i][i] = max
-            for (var j=i+1; j<=numValues; j++) {
-                var slack = slacks[i][j-1]-values[j-1]
-                if slack>=0 {
-                    slacks[i][j] = slack
+        var slacks = [[Float]](count: numValues, repeatedValue: [Float](count: numValues, repeatedValue: Float.infinity))
+        for var from=0; from<numValues; from++ {
+            for var to=from; to<numValues; to++ {
+                var slack = to==from ? max-values[to] : slacks[from][to-1]-values[to]
+                if slack >= 0 {
+                    slacks[from][to] = slack
                 } else {
                     break
                 }
@@ -295,57 +293,46 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         }
         
         // build up values of optimal solutions
-        var opt = [Float](count: numValues+1, repeatedValue: 0)
-        for (var j=1;j<=numValues;j++) {
+        var opt = [Float](count: numValues, repeatedValue: 0)
+        opt[0] = pow(slacks[0][0], 2)
+        for var to=1; to<numValues; to++ {
             var minVal = Float.infinity
-            for (var i=j;i>=0;i--) {
-                var slack = slacks[i][j]*slacks[i][j]
-                if slack > max*max {
-                    break
+            for var from=0; from<=to; from++ {
+                var slack = pow(slacks[from][to], 2)
+                if slack > pow(max, 2) {
+                    continue
                 }
-                minVal = min(minVal, slack+opt[i])
+                var opp = (from==0 ? 0 : opt[from-1])
+                minVal = min(minVal, slack+opp)
             }
-            opt[j] = minVal
+            opt[to] = minVal
         }
         
         // traceback the optimal solution
-        var solution = findSolution(slacks, opt: opt, upTo: numValues)
-        if solution.last != numValues {
-            solution.append(numValues)
-        }
-        
-        // partition widths using the optimal solution
-        var partitions = [[Float]](), start = 0
-        for end in solution {
-            if start != end {
-                partitions.append([Float](values[Range(start: start, end: end)]))
-            }
-            start = end
-        }
-        
+        var partitions = [[Float]]()
+        findSolution(values, slacks: slacks, opt: opt, to: numValues-1, partitions: &partitions)
         return partitions
     }
     
     // traceback solution
-    private func findSolution(slacks:[[Float]], opt: [Float], upTo n:Int) -> [Int] {
-        if n<=1 {
-            return []
+    private func findSolution(values: [Float], slacks:[[Float]], opt: [Float], to: Int, inout partitions: [[Float]]) {
+        if to<0 {
+            partitions = partitions.reverse()
         } else {
             var minVal = Float.infinity, minIndex = 0
-            var curVals = [Float]()
-            for (var i=n;i>=0;i--) {
-                if slacks[i][n] == Float.infinity {
-                    break
+            for var from=to; from>=0; from-- {
+                if slacks[from][to] == Float.infinity {
+                    continue
                 }
                 
-                var curVal = slacks[i][n]*slacks[i][n]+opt[i]
-                curVals.append(curVal)
+                var curVal = pow(slacks[from][to], 2) + (from==0 ? 0 : opt[from-1])
                 if minVal > curVal {
                     minVal = curVal
-                    minIndex = i
+                    minIndex = from
                 }
             }
-            return findSolution(slacks, opt: opt, upTo: minIndex)+[minIndex]
+            partitions.append([Float](values[minIndex...to]))
+            findSolution(values, slacks: slacks, opt: opt, to: minIndex-1, partitions: &partitions)
         }
     }
     

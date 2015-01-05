@@ -21,7 +21,7 @@ ZLBalancedFlowLayout supports all properties of UICollectionViewFlowLayout and t
 Use `rowHeight` to adjust the item height.
 ~~~swift
 /// The ideal row height of items in the grid
-var rowHeight = CGFloat(120)
+var rowHeight = CGFloat(100)
 
 /// The option to enforce the ideal row height by changing the aspect ratio of the item if necessary.
 var enforcesRowHeight = false
