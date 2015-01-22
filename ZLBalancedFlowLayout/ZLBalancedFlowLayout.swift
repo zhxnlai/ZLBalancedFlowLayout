@@ -28,7 +28,7 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     private var contentSize = CGSizeZero
     
     // TODO: shouldInvalidateLayoutForBoundsChange
-
+    
     // MARK: - UICollectionViewLayout
     override func prepareLayout() {
         resetItemFrames()
@@ -58,15 +58,16 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
             // can be further optimized
             for section in (0..<collectionView.numberOfSections()) {
                 var sectionIndexPath = NSIndexPath(forItem: 0, inSection: section)
-                let headerAttributes = layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionHeader, atIndexPath: sectionIndexPath)
-                if headerAttributes.frame.size != CGSizeZero && CGRectIntersectsRect(headerAttributes.frame, rect) {
-                    layoutAttributes.append(headerAttributes)
+                if let headerAttributes = layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionHeader, atIndexPath: sectionIndexPath) {
+                    if headerAttributes.frame.size != CGSizeZero && CGRectIntersectsRect(headerAttributes.frame, rect) {
+                        layoutAttributes.append(headerAttributes)
+                    }
                 }
-                let footerAttributes = layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionFooter, atIndexPath: sectionIndexPath)
-                if footerAttributes.frame.size != CGSizeZero && CGRectIntersectsRect(footerAttributes.frame, rect) {
-                    layoutAttributes.append(footerAttributes)
+                if let footerAttributes = layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionFooter, atIndexPath: sectionIndexPath) {
+                    if footerAttributes.frame.size != CGSizeZero && CGRectIntersectsRect(footerAttributes.frame, rect) {
+                        layoutAttributes.append(footerAttributes)
+                    }
                 }
-                
                 var minY = CGFloat(0), maxY = CGFloat(0)
                 if (scrollDirection == .Vertical) {
                     minY = CGRectGetMinY(rect)-CGRectGetHeight(rect)
@@ -114,7 +115,7 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     override func collectionViewContentSize() -> CGSize {
         return contentSize
     }
-
+    
     // MARK: - UICollectionViewLayout Helpers
     private func collectionView(collectionView:UICollectionView, frameForHeader isForHeader:Bool, inSection section:Int, inout updateContentSize contentSize:CGSize) -> CGRect {
         var size = referenceSizeForHeader(isForHeader, inSection: section), frame = CGRectZero
@@ -148,7 +149,7 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         origin = scrollDirection == .Vertical ?
             CGPoint(x: inset.left, y: contentSize.height+inset.top) :
             CGPoint(x: contentSize.width+inset.left, y: inset.top)
-
+        
         for row in partitions {
             // contentWidth/summedWidth
             let innerMargin = Float(CGFloat(row.count-1)*minimumInteritemSpacing),
@@ -279,6 +280,9 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     // parition the widths in to rows using dynamic programming O(n^2)
     private func partition(values: [Float], max:Float) -> [[Float]] {
         var numValues = values.count
+        if numValues == 0 {
+            return []
+        }
         
         var slacks = [[Float]](count: numValues, repeatedValue: [Float](count: numValues, repeatedValue: Float.infinity))
         for var from=0; from<numValues; from++ {
