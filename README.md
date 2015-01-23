@@ -12,6 +12,19 @@ Previews
 ###UICollectionViewScrollDirectionHorizontal
 <img width="640 px" src="Previews/horizontalLandscape.png"/>
 
+CocoaPods
+---
+You can install `ZLBalancedFlowLayout` through CocoaPods adding the following to your Podfile:
+
+~~~ruby
+pod 'ZLBalancedFlowLayout'
+~~~
+
+CocoaPods' support for swift is still pre-released, and requires your iOS deployment target to be [8.0 or later](https://github.com/CocoaPods/swift):
+```bash
+[sudo] gem install cocoapods --pre
+```
+
 Usage
 ---
 Checkout the [demo app](https://github.com/zhxnlai/ZLBalancedFlowLayout/tree/master/ZLBalancedFlowLayoutDemo) for an example.
