@@ -1,6 +1,6 @@
 //
-//  ZLLazyBalancedFlowLayout.swift
-//  ZLLazyBalancedFlowLayoutDemo
+//  ZLBalancedFlowLayout.swift
+//  ZLBalancedFlowLayoutDemo
 //
 //  Created by Zhixuan Lai on 12/20/14.
 //  Copyright (c) 2014 Zhixuan Lai. All rights reserved.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
+public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     /// The ideal row height of items in the grid
-    var rowHeight: CGFloat = 100 {
+    public var rowHeight: CGFloat = 100 {
         didSet {
             invalidateLayout()
         }
     }
     
     /// The option to enforce the ideal row height by changing the aspect ratio of the item if necessary.
-    var enforcesRowHeight: Bool = false {
+    public var enforcesRowHeight: Bool = false {
         didSet {
             invalidateLayout()
         }
@@ -30,7 +30,7 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     // TODO: shouldInvalidateLayoutForBoundsChange
     
     // MARK: - UICollectionViewLayout
-    override func prepareLayout() {
+    override public func prepareLayout() {
         resetItemFrames()
         contentSize = CGSizeZero
         
@@ -51,7 +51,7 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         }
     }
     
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
+    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
         
         if let collectionView = self.collectionView {
@@ -87,13 +87,13 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         return layoutAttributes
     }
     
-    override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+    override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
         var attributes = super.layoutAttributesForItemAtIndexPath(indexPath)
         attributes.frame = itemFrames[indexPath.section][indexPath.row]
         return attributes
     }
     
-    override func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+    override public func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
         var attributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: elementKind, withIndexPath: indexPath)
         
         switch (elementKind) {
@@ -112,7 +112,7 @@ class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         return attributes
     }
     
-    override func collectionViewContentSize() -> CGSize {
+    override public func collectionViewContentSize() -> CGSize {
         return contentSize
     }
     
