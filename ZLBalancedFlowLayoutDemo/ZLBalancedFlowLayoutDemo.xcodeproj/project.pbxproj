@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09093A641A72DC3000B46D8E /* ZLBalancedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09093A631A72DC3000B46D8E /* ZLBalancedFlowLayout.swift */; };
 		091033EB1A4B6365000BB27C /* gray-langur-anand-india_86232_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 091033E91A4B6365000BB27C /* gray-langur-anand-india_86232_990x742.jpg */; };
 		091033EC1A4B6365000BB27C /* otter-running-united-kingdom_81118_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 091033EA1A4B6365000BB27C /* otter-running-united-kingdom_81118_990x742.jpg */; };
-		091033EF1A4B9BFA000BB27C /* ZLBalancedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091033EE1A4B9BFA000BB27C /* ZLBalancedFlowLayout.swift */; };
 		092B26631A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26471A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg */; };
 		092B26641A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26481A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg */; };
 		092B26651A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092B26491A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg */; };
@@ -59,9 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09093A631A72DC3000B46D8E /* ZLBalancedFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBalancedFlowLayout.swift; sourceTree = "<group>"; };
 		091033E91A4B6365000BB27C /* gray-langur-anand-india_86232_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gray-langur-anand-india_86232_990x742.jpg"; sourceTree = "<group>"; };
 		091033EA1A4B6365000BB27C /* otter-running-united-kingdom_81118_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "otter-running-united-kingdom_81118_990x742.jpg"; sourceTree = "<group>"; };
-		091033EE1A4B9BFA000BB27C /* ZLBalancedFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBalancedFlowLayout.swift; sourceTree = "<group>"; };
 		092B26471A4AD1C500302120 /* american-crocodile-caribbean-sea_82044_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "american-crocodile-caribbean-sea_82044_990x742.jpg"; sourceTree = "<group>"; };
 		092B26481A4AD1C500302120 /* atlantic-walrus-greenland-nicklen_75331_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "atlantic-walrus-greenland-nicklen_75331_990x742.jpg"; sourceTree = "<group>"; };
 		092B26491A4AD1C500302120 /* bald-eagles-birds-talons_86760_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bald-eagles-birds-talons_86760_990x742.jpg"; sourceTree = "<group>"; };
@@ -122,13 +122,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		091033ED1A4B9BFA000BB27C /* ZLBalancedFlowLayout */ = {
+		09093A621A72DC3000B46D8E /* ZLBalancedFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
-				091033EE1A4B9BFA000BB27C /* ZLBalancedFlowLayout.swift */,
+				09093A631A72DC3000B46D8E /* ZLBalancedFlowLayout.swift */,
 			);
-			name = ZLBalancedFlowLayout;
-			path = ../../ZLBalancedFlowLayout;
+			path = ZLBalancedFlowLayout;
 			sourceTree = "<group>";
 		};
 		092B26461A4AD1C500302120 /* images */ = {
@@ -171,6 +170,7 @@
 		0945267C1A4A85FF00849DFC = {
 			isa = PBXGroup;
 			children = (
+				09093A621A72DC3000B46D8E /* ZLBalancedFlowLayout */,
 				094526871A4A85FF00849DFC /* ZLBalancedFlowLayoutDemo */,
 				0945269D1A4A85FF00849DFC /* ZLBalancedFlowLayoutDemoTests */,
 				094526861A4A85FF00849DFC /* Products */,
@@ -189,7 +189,6 @@
 		094526871A4A85FF00849DFC /* ZLBalancedFlowLayoutDemo */ = {
 			isa = PBXGroup;
 			children = (
-				091033ED1A4B9BFA000BB27C /* ZLBalancedFlowLayout */,
 				0945268A1A4A85FF00849DFC /* AppDelegate.swift */,
 				0945268C1A4A85FF00849DFC /* ViewController.swift */,
 				096B17B31A56337F00D163EE /* SettingsViewController.swift */,
@@ -359,10 +358,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0945268D1A4A85FF00849DFC /* ViewController.swift in Sources */,
+				09093A641A72DC3000B46D8E /* ZLBalancedFlowLayout.swift in Sources */,
 				094526E01A4AAF4500849DFC /* LabelCollectionReusableView.swift in Sources */,
 				0945268B1A4A85FF00849DFC /* AppDelegate.swift in Sources */,
 				096B17B41A56337F00D163EE /* SettingsViewController.swift in Sources */,
-				091033EF1A4B9BFA000BB27C /* ZLBalancedFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +484,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/zhixuanlai/Developer/Github/ZLBalancedFlowLayout/ZLBalancedFlowLayout/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = ZLBalancedFlowLayoutDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -495,6 +498,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/zhixuanlai/Developer/Github/ZLBalancedFlowLayout/ZLBalancedFlowLayout/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = ZLBalancedFlowLayoutDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
