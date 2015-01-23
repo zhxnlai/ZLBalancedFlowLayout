@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source       = { :git => "http://EXAMPLE/ZLBalancedFlowLayout.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/zhxnlai/ZLBalancedFlowLayout.git", :tag => "0.0.1" }
   s.source_files = 'ZLBalancedFlowLayout/*.swift'
 
   s.framework  = "UIKit"
