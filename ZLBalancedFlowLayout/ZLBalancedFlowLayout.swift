@@ -199,7 +199,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     // MARK: - Delegate Helpers
     private func referenceSizeForHeader(isForHeader: Bool, inSection section: Int) -> CGSize {
         if let collectionView = self.collectionView {
-            if let delegate = collectionView.delegate? as? UICollectionViewDelegateFlowLayout {
+            if let delegate = collectionView.delegate as? UICollectionViewDelegateFlowLayout {
                 var size:CGSize? = nil
                 if isForHeader {
                     size = delegate.collectionView?(collectionView, layout: self, referenceSizeForHeaderInSection: section)
@@ -220,7 +220,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     
     private func minimumLineSpacingForSection(section: Int) -> CGFloat {
         if let collectionView = self.collectionView {
-            if let delegate = collectionView.delegate? as? UICollectionViewDelegateFlowLayout {
+            if let delegate = collectionView.delegate as? UICollectionViewDelegateFlowLayout {
                 if let minimumLineSpacing = delegate.collectionView?(collectionView, layout: self, minimumLineSpacingForSectionAtIndex: section) {
                     return minimumLineSpacing
                 }
@@ -231,7 +231,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     
     private func minimumInteritemSpacingForSection(section: Int) -> CGFloat {
         if let collectionView = self.collectionView {
-            if let delegate = collectionView.delegate? as? UICollectionViewDelegateFlowLayout {
+            if let delegate = collectionView.delegate as? UICollectionViewDelegateFlowLayout {
                 if let minimumInteritemSpacing = delegate.collectionView?(collectionView, layout: self, minimumInteritemSpacingForSectionAtIndex: section) {
                     return minimumInteritemSpacing
                 }
@@ -242,7 +242,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     
     private func sizeForItemAtIndexPath(indexPath: NSIndexPath) -> CGSize {
         if let collectionView = self.collectionView {
-            if let delegate = collectionView.delegate? as? UICollectionViewDelegateFlowLayout {
+            if let delegate = collectionView.delegate as? UICollectionViewDelegateFlowLayout {
                 if let size = delegate.collectionView?(collectionView, layout: self, sizeForItemAtIndexPath:indexPath) {
                     return size
                 }
@@ -253,7 +253,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     
     private func insetForSection(section: Int) -> UIEdgeInsets {
         if let collectionView = self.collectionView {
-            if let delegate = collectionView.delegate? as? UICollectionViewDelegateFlowLayout {
+            if let delegate = collectionView.delegate as? UICollectionViewDelegateFlowLayout {
                 if let inset = delegate.collectionView?(collectionView, layout: self, insetForSectionAtIndex: section) {
                     return inset
                 }

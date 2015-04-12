@@ -42,10 +42,10 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     private var images = [UIImage](), needsResetLayout = false
     private let cellIdentifier = "cell", headerIdentifier = "header", footerIdentifier = "footer"
 
-    override init(collectionViewLayout layout: UICollectionViewLayout!) {
+    override init(collectionViewLayout layout: UICollectionViewLayout) {
         super.init(collectionViewLayout: layout)
         
-        var paths = NSBundle.mainBundle().pathsForResourcesOfType("jpg", inDirectory: "") as Array<String>
+        var paths = NSBundle.mainBundle().pathsForResourcesOfType("jpg", inDirectory: "") as! Array<String>
         for path in paths {
             if let image = UIImage(contentsOfFile: path) {
                 images.append(image)
@@ -111,7 +111,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as UICollectionViewCell
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
         var imageView = UIImageView(image: imageForIndexPath(indexPath))
         imageView.contentMode = .ScaleAspectFill
         cell.backgroundView = imageView
@@ -123,10 +123,10 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         var view = LabelCollectionReusableView(frame: CGRectZero)
         switch (kind) {
         case UICollectionElementKindSectionHeader:
-            view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier, forIndexPath: indexPath) as LabelCollectionReusableView
+            view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier, forIndexPath: indexPath) as! LabelCollectionReusableView
             view.textLabel.text = "Header"
         case UICollectionElementKindSectionFooter:
-            view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionFooter, withReuseIdentifier: footerIdentifier, forIndexPath: indexPath) as LabelCollectionReusableView
+            view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionFooter, withReuseIdentifier: footerIdentifier, forIndexPath: indexPath) as! LabelCollectionReusableView
             view.textLabel.text = "Footer"
         default:
             view.textLabel.text = "N/A"
