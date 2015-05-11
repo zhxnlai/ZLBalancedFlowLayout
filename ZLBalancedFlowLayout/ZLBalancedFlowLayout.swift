@@ -170,16 +170,16 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
                 }
             }
             if scrollDirection == .Vertical {
-                origin = CGPoint(x: inset.left, y: origin.y+framesInSection.last!.height+minimumLineSpacing+inset.bottom)
+                origin = CGPoint(x: inset.left, y: origin.y+framesInSection.last!.height+minimumLineSpacing)
             } else {
-                origin = CGPoint(x: origin.x+framesInSection.last!.width+minimumLineSpacing+inset.right, y: inset.top)
+                origin = CGPoint(x: origin.x+framesInSection.last!.width+minimumLineSpacing, y: inset.top)
             }
         }
 
         if scrollDirection == .Vertical {
-            contentSize = CGSize(width: contentSize.width, height: origin.y)
+            contentSize = CGSize(width: contentSize.width, height: origin.y+inset.bottom)
         } else {
-            contentSize = CGSize(width: origin.x, height: contentSize.height)
+            contentSize = CGSize(width: origin.x+inset.right, height: contentSize.height)
         }
 
         return (framesInSection, originYsInSection)
