@@ -51,13 +51,13 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         }
     }
 
-    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
+    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
 
         if let collectionView = self.collectionView {
             // can be further optimized
             for section in (0..<collectionView.numberOfSections()) {
-                var sectionIndexPath = NSIndexPath(forItem: 0, inSection: section)
+                let sectionIndexPath = NSIndexPath(forItem: 0, inSection: section)
                 if let headerAttributes = layoutAttributesForSupplementaryViewOfKind(UICollectionElementKindSectionHeader, atIndexPath: sectionIndexPath) where headerAttributes.frame.size != CGSizeZero && CGRectIntersectsRect(headerAttributes.frame, rect) {
                     layoutAttributes.append(headerAttributes)
                 }
@@ -84,13 +84,13 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     }
 
     override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
-        var attributes = super.layoutAttributesForItemAtIndexPath(indexPath)
+        var attributes = super.layoutAttributesForItemAtIndexPath(indexPath)!
         attributes.frame = itemFrames[indexPath.section][indexPath.row]
         return attributes
     }
 
     override public func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
-        var attributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: elementKind, withIndexPath: indexPath)
+        let attributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: elementKind, withIndexPath: indexPath)
 
         switch (elementKind) {
         case UICollectionElementKindSectionHeader:
@@ -127,7 +127,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
 
     private func collectionView(collectionView:UICollectionView, framesForItemsInSection section:Int, inout updateContentSize contentSize:CGSize) -> ([CGRect], [CGFloat]) {
         let maxWidth = Float(scrollDirection == .Vertical ? contentSize.width : contentSize.height),
-        widths = map(0..<collectionView.numberOfItemsInSection(section), {(item: Int) -> Float in
+        widths = (0..<collectionView.numberOfItemsInSection(section)).map({(item: Int) -> Float in
             let itemSize = self.sizeForItemAtIndexPath(NSIndexPath(forItem: item, inSection: section)),
             ratio = self.scrollDirection == .Vertical ?
                 itemSize.width/itemSize.height :
@@ -136,7 +136,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         })
 
         // parition widths
-        var partitions = partition(widths, max: Float(maxWidth))
+        let partitions = partition(widths, max: Float(maxWidth))
 
         let minimumInteritemSpacing = minimumInteritemSpacingForSection(section),
         minimumLineSpacing = minimumLineSpacingForSection(section),
@@ -244,7 +244,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     private func binarySearch<T: Comparable>(array: Array<T>, value:T) -> Int{
         var imin=0, imax=array.count
         while imin<imax {
-            var imid = imin+(imax-imin)/2
+            let imid = imin+(imax-imin)/2
 
             if array[imid] < value {
                 imin = imid+1
@@ -257,7 +257,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
 
     // parition the widths in to rows using dynamic programming O(n^2)
     private func partition(values: [Float], max:Float) -> [[Float]] {
-        var numValues = values.count
+        let numValues = values.count
         if numValues == 0 {
             return []
         }
@@ -265,7 +265,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         var slacks = [[Float]](count: numValues, repeatedValue: [Float](count: numValues, repeatedValue: Float.infinity))
         for var from=0; from<numValues; from++ {
             for var to=from; to<numValues; to++ {
-                var slack = to==from ? max-values[to] : slacks[from][to-1]-values[to]
+                let slack = to==from ? max-values[to] : slacks[from][to-1]-values[to]
                 if slack >= 0 {
                     slacks[from][to] = slack
                 } else {
@@ -280,11 +280,11 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
         for var to=1; to<numValues; to++ {
             var minVal = Float.infinity
             for var from=0; from<=to; from++ {
-                var slack = pow(slacks[from][to], 2)
+                let slack = pow(slacks[from][to], 2)
                 if slack > pow(max, 2) {
                     continue
                 }
-                var opp = (from==0 ? 0 : opt[from-1])
+                let opp = (from==0 ? 0 : opt[from-1])
                 minVal = min(minVal, slack+opp)
             }
             opt[to] = minVal
@@ -299,7 +299,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
     // traceback solution
     private func findSolution(values: [Float], slacks:[[Float]], opt: [Float], to: Int, inout partitions: [[Float]]) {
         if to<0 {
-            partitions = partitions.reverse()
+            partitions = Array(partitions.reverse())
         } else {
             var minVal = Float.infinity, minIndex = 0
             for var from=to; from>=0; from-- {
@@ -307,7 +307,7 @@ public class ZLBalancedFlowLayout: UICollectionViewFlowLayout {
                     continue
                 }
 
-                var curVal = pow(slacks[from][to], 2) + (from==0 ? 0 : opt[from-1])
+                let curVal = pow(slacks[from][to], 2) + (from==0 ? 0 : opt[from-1])
                 if minVal > curVal {
                     minVal = curVal
                     minIndex = from
